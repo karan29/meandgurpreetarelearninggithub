@@ -1,0 +1,66 @@
+<html ng-app="ang_Assgn">
+<head>
+	<title>Angular Assignments Basic</title>
+	<script type="text/javascript" src='js/angular.js'></script>
+	<script type="text/javascript" src='js/basic.js'></script>
+	<style>
+	.default{
+		visibility:hidden;
+	}
+	.newclass{
+		visibility:visible;
+	}
+	</style>
+</head>
+<body>
+
+<h2>Basic Angular Questions</h2>
+
+<div ng-controller='myCtrl'>
+
+	                                  <!-- ques 1 -->
+
+<img ng-src={{img}}>
+<button ng-click='colors("red")'>ChangeToRed</button>
+<button ng-click='colors("amber")'>ChangeToYellow</button>
+<button ng-click='colors("green")'>ChangeToGreen</button>
+<br><br>
+
+
+
+                                      <!-- ques 2 -->
+
+<img ng-src="images/second.jpg" ng-show='image'>
+<button ng-click='image = !image'>Toggle</button><br>
+
+<button ng-click="disableClick()" ng-disabled="isDisabled">Disable the Button</button><br>
+
+first name<input type='checkbox' ng-model='checked'>
+<button ng-disabled='!checked'>Enable & Disable Button</button>
+
+<br><br>
+
+
+
+                                           <!-- ques 3  ques 6--> 
+
+  <ul>
+ <li ng-repeat='product in products'>{{product.name|capitalize}} - {{product.price|currency}}-{{product.quantity}}</li>
+  </ul> <br>      
+  <ul>
+<li ng-repeat='product in products'>{{product.name|reverse}}</li>
+  </ul><br><br>
+
+
+
+                                            <!-- ques 5 -->
+
+<button ng-click="instance=''" value='removeclass'>fadeout</button>
+<button ng-click="instance='newclass'" value='addclass'>fadein</button>
+<img ng-src="images/second.jpg" ng-class='instance' class='default'>
+
+
+
+</div>
+</body>
+</html>

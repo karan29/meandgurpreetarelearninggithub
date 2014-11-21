@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <link rel="stylesheet" href="css/movies.css">
+<link rel="stylesheet" href="css/bootstrap-theme.css">
+<link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular-resource.js"></script> 
+<!-- <script src="http//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script> -->
+<!-- <script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/ui-bootstrap-tpls-0.11.0.min.js"></script> -->
+<script type="text/javascript" src="js/rotten.js"></script>
+
+
+</head>
+<body>
+<div ng-app="movies">
+    <div ng-controller="movieController">
+    
+    <form ng-submit="fetchResults()">
+    <input placeholder="Search for a movie" type="search" ng-model="search" >
+    
+    <button type="submit" value="go" class="btn btn-primary" >Search</button>
+ 
+  </form>
+  
+  <table class="table table-hover">
+  <tr class="active"  ng-repeat="movie in result">
+  <td class="success">{{movie.title}}</td>
+  <td class="danger">{{movie.year}}</td>
+  <td class="warning">
+  <img  src={{movie.posters.original}} alt={{movie.title}} class="img-responsive">
+  </td>
+   <td class="warning">{{movie.year}}</td>
+    <td class="default">{{movie.genres}}</td>
+     <td class="info">{{movie.mpaa_rating}}</td>
+      <td class="warning">{{movie.runtime}}</td>
+       <td class="default">{{movie.studio}}</td>
+        <td class="warning">{{movie.synopsis}}</td>
+         <td class="warning">{{movie.id}}</td>
+ 
+  </table>
+	   </div>
+ 			</div>
+ 
+
+
+
+
+
+
+</body>
+</html>

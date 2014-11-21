@@ -1,0 +1,28 @@
+[
+{
+	"name":"karan",
+	"age":30,
+	"Profession":"UI Developer"
+},
+{
+	"name":"Ahmad",
+	"age":28,
+	"Profession":"Accountant"
+},
+{
+    "name":"Mark",
+	"age":33,
+	"Profession":"Manager"
+},
+   {
+   	"name":"John",
+	"age":33,
+	"Profession":"Senior Manager"
+	},
+
+ {
+    "name":"Tina",
+	"age":28,
+	"Profession":"Chef"
+}
+]

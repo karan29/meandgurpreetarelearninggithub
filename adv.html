@@ -1,0 +1,65 @@
+<html ng-app='advApp'>
+<head>
+	<title>Angular Advance Questions</title>
+	<script type="text/javascript" src='js/angular.js'></script>
+	<script type="text/javascript" src='js/adv.js'></script>
+	<script type="text/javascript" src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+
+	<script type="text/javascript" src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<style>
+.done-true{
+	text-decoration:line-through;
+}
+</style>
+</head>
+
+<body>
+     										<!-- QUES 14 -->
+
+<div ng-controller='myCtrl'>
+
+<input type='text' ng-model='addTask' placeholder='What Needs To Be Done?' size='40'><button ng-click='add()'>Add To Task</button>
+<ul style='list-style:none'>
+<li ng-repeat='todo in todos'><input type='checkbox' ng-model='done'><span class='done-{{done}}'>{{todo.text}}</span></li>
+</ul>
+<p>Total to be done: {{todos.length}}</p>
+</div>
+
+
+										<!-- QUES 15 -->
+
+<div ng-controller='myctrl1'>
+	<input type='text' ng-model='fname' placeholder='Enter Your Name'>
+	<input type='text' ng-model='fage' placeholder='Enter Your Age'>
+	<input type='text' ng-model='fprof' placeholder='Enter Your Profession'>
+
+	<table class='table'>
+		<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Profession</th>
+		</tr>
+		
+		<tr ng-repeat='record in records| orderBy:"name" | filter:query'>
+			<button ng-click='add()' class='btn btn-primary'>Add Row</button> &nbsp;
+			<button ng-click='undo()' class='btn btn-info'>Undo</button> &nbsp;
+			<input type='search' placeholder='search' ng-model='query'>
+			<td>{{record.name}}</td>
+			<td>{{record.age}}</td>
+			<td>{{record.Profession}}</td>
+			<td><button ng-click='del($index)' class='btn btn-danger'>Delete</button></td>
+			<td><button ng-click='edit($index)' class='btn btn-warning'>Edit</button></td>
+			<td></td>
+		</tr>
+	</table>
+</div>
+
+
+
+
+</body>
+</html>

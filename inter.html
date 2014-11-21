@@ -1,0 +1,66 @@
+<html ng-app='interapp'>
+<head>
+	<title>Intermediate Angular Questions</title>
+	<script type="text/javascript" src='js/angular.js'></script>
+	<script type="text/javascript" src='js/inter.js'></script>
+	<script type="text/javascript" src="js/ui-bootstrap-tpls-0.11.2.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+	                                 <!-- QUES 9 -->
+
+<div ng-controller='myCtrl'>
+<table class='table'>
+	<tr>
+		<th>Products</th>
+		<th>Price</th>
+		<th>Quantity</th>
+	</tr>
+	<tr ng-repeat='product in products'>
+		<td>{{product.name}}</td>
+		<td>{{product.price}}</td>
+		<td>{{product.qty}}</td>
+	</tr>
+</table>
+</div>
+<br><br>
+
+                                              <!-- QUES 11, 12 -->
+
+<div ng-controller='myctrl1'>
+	<input type='text' ng-model='fname' placeholder='Enter Your Name'>
+	<input type='text' ng-model='fage' placeholder='Enter Your Age'>
+	<input type='text' ng-model='fprof' placeholder='Enter Your Profession'>
+	<table class='table'>
+		<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Profession</th>
+		</tr>
+		
+		<tr ng-repeat='record in records'>
+			<button ng-click='add()' class='btn btn-primary'>Add Row</button> &nbsp;
+			<button ng-click='undo()' class='btn btn-info'>Undo</button>
+			<td>{{record.name}}</td>
+			<td>{{record.age}}</td>
+			<td>{{record.Profession}}</td>
+			<td><button ng-click='del($index)' class='btn btn-danger'>Delete</button></td>
+			<td><button ng-click='edit($index)' class='btn btn-warning'>Edit</button></td>
+			<td></td>
+		</tr>
+	</table>
+</div>
+
+
+                                 <!-- QUES 8 -->
+
+
+                                 <!-- QUES 10 -->
+
+
+
+</body>
+</html>
